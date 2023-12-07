@@ -1,0 +1,6 @@
+D:\programming calss\c-sharp\allQset\set1\set1\bin\Debug\set1.exe.config
+D:\programming calss\c-sharp\allQset\set1\set1\bin\Debug\set1.exe
+D:\programming calss\c-sharp\allQset\set1\set1\bin\Debug\set1.pdb
+D:\programming calss\c-sharp\allQset\set1\set1\obj\Debug\set1.csprojResolveAssemblyReference.cache
+D:\programming calss\c-sharp\allQset\set1\set1\obj\Debug\set1.exe
+D:\programming calss\c-sharp\allQset\set1\set1\obj\Debug\set1.pdb
