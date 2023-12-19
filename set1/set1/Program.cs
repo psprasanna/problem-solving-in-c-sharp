@@ -10,7 +10,7 @@ namespace set1
     {
         static void Main(string[] args)
         {
-            q5();
+            q10();
         }
         static int getInt(string message) 
         {
@@ -56,6 +56,37 @@ namespace set1
             int quotient = numerator / denominator;
             int remainder = numerator % denominator;
             Console.WriteLine("quotient : " + quotient + "\nremainder : " + remainder);
+        }
+        static void q6() 
+        {
+            //program to find the square of a given number
+            int number = getInt("Enter the number to Find it Square : ");
+            Console.WriteLine("Square of "+number+" is : "+(number*number));
+        }
+        static void q7() 
+        {
+            //program to find the square root of a given number
+            int number = getInt("Enter the number to find its square root : ");
+            Console.WriteLine("Square root of "+number+"is : "+Math.Sqrt(number));
+        }
+        static void q8() 
+        {
+            //program to calculate the area of triangle
+            int breadth = getInt("Enter the Breadth  : ");
+            int height = getInt("Enter the Height : ");
+            Console.WriteLine("Area of Triangle is : "+(0.5*breadth*height));
+        }
+        static void q9() 
+        {
+            //program to convert kilometers to miles
+            int kiloMeter = getInt("Enter the Kilo Meters : ");
+            Console.WriteLine("Miles : "+(kiloMeter*0.621371));
+        }
+        static void q10() 
+        {
+            //program to convert celcius to fahrenheit
+            int celcius = getInt("Enter the celcius : ");
+            Console.WriteLine("Fahrenheit : "+((celcius*9/5)+32));
         }
     }
 }
