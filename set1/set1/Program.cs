@@ -10,7 +10,7 @@ namespace set1
     {
         static void Main(string[] args)
         {
-            q10();
+            q15();
         }
         static int getInt(string message) 
         {
@@ -87,6 +87,54 @@ namespace set1
             //program to convert celcius to fahrenheit
             int celcius = getInt("Enter the celcius : ");
             Console.WriteLine("Fahrenheit : "+((celcius*9/5)+32));
+        }
+        static void q11() 
+        {
+            //program to swap two variables
+            int a = getInt("Enter the value of A : ");
+            int b = getInt("Enter the value of B : ");
+            int temp = a;
+            a = b;
+            b = temp;
+            Console.WriteLine("A is : "+a);
+            Console.WriteLine("B is : " + b);
+        }
+        static void q12() 
+        {
+            //program to swap two variables without using temporary variables
+            int a = getInt("Enter the value of A : ");
+            int b = getInt("Enter the value of B : ");
+            a = a + b;
+            b = a - b;
+            a = a - b;
+            Console.WriteLine("A is : " + a);
+            Console.WriteLine("B is : " + b);
+        }
+        static void q13() 
+        {
+            //program to swap variables without causing overflow
+            int a = getInt("Enter the value of A : ");
+            int b = getInt("Enter the value of B : ");
+            a = a ^ b;
+            b = a ^ b;
+            a = a ^ b;
+            Console.WriteLine("A is : " + a);
+            Console.WriteLine("B is : " + b);
+        }
+        static void q14() 
+        {
+            //generate random numbers between 1 to 100
+            Random randomNumber = new Random();
+            Console.WriteLine(randomNumber.Next(1,100));
+        }
+        static void q15() 
+        {
+            //Find the area of a field in acres, whose length and width are given in feet.
+            double length = getInt("Enter the length : ");
+            double width = getInt("Enter the width : ");
+            double sqft = length * width;
+            double acres = sqft / 43650;
+            Console.WriteLine("Area of field in acres is : "+acres);
         }
     }
 }
