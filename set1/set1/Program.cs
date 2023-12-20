@@ -10,7 +10,7 @@ namespace set1
     {
         static void Main(string[] args)
         {
-            q15();
+            q17();
         }
         static int getInt(string message) 
         {
@@ -135,6 +135,22 @@ namespace set1
             double sqft = length * width;
             double acres = sqft / 43650;
             Console.WriteLine("Area of field in acres is : "+acres);
+        }
+        static void q16() 
+        {
+            //sum of natural numbers
+            int n = getInt("Enter the value of N : ");
+            Console.WriteLine("Sum of "+n+ " Natural numbers : "+(n*(n+1)/2));
+        }
+        static void q17() 
+        {
+            //get three numbers and find the average
+            int n1 = getInt("Enter the first number : ");
+            int n2 = getInt("Enter the Second number : ");
+            int n3 = getInt("Enter the Third number : ");
+            int total = n1+n2+n3;
+            double average = total / 3;
+            Console.WriteLine("Average is : "+average);
         }
     }
 }
