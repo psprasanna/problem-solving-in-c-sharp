@@ -10,12 +10,17 @@ namespace set1
     {
         static void Main(string[] args)
         {
-            q17();
+            q24();
         }
         static int getInt(string message) 
         {
             Console.Write(message);
             return int.Parse(Console.ReadLine());
+        }
+        static double getDouble(string message) 
+        {
+            Console.Write(message);
+            return double.Parse(Console.ReadLine());
         }
         static void q1()
         {
@@ -151,6 +156,89 @@ namespace set1
             int total = n1+n2+n3;
             double average = total / 3;
             Console.WriteLine("Average is : "+average);
+        }
+        static void q18() 
+        {
+            //write a program to calculate the tip to be provided to the waiter, at 5% of bill amount
+            double billAmount = getDouble("Enter the Bill Amount : ");
+            double tip = billAmount * 5.0 / 100;
+            Console.WriteLine("Tip : "+tip);
+        }
+        static void q19() 
+        {
+            //Given the total amount paid and the tax percentage, calculate the net amount of the product backwards.
+            double totalAmount, taxPercentage, taxRate, netAmount;
+
+            totalAmount = getDouble("Enter the Total Amount : ");
+            taxPercentage = getDouble("Enter the Tax Percentage : ");
+            taxRate = taxPercentage/100;
+            netAmount = totalAmount/(1+taxRate);
+            Console.WriteLine("Net Amount : "+netAmount);
+            Console.WriteLine("Total Amount calculated by net amount : "+(netAmount+(netAmount*taxPercentage/100.0)));
+        }
+        static void q20() 
+        {
+            //Given the basic pay,DA% and TA%,PF%, calculate the grosspay.
+            double basicPay, DaPercentage, TaPercentage, PfPercentage,grosspay,DaAmount,TaAmount,PfAmount;
+            basicPay = getDouble("Enter the basic pay : ");
+            DaPercentage = getDouble("Enter da Percentage : ");
+            TaPercentage = getDouble("Enter ta Percentage : ");
+            PfPercentage = getDouble("Enter pf Percentage : ");
+
+            DaAmount = basicPay*DaPercentage/100;
+            TaAmount = basicPay*TaPercentage/100;
+            PfAmount = basicPay*PfPercentage/100;
+            grosspay = (basicPay + DaAmount + TaAmount) - PfAmount;
+            Console.WriteLine("Gross Pay : "+grosspay);
+        }
+        static void q21()
+        {
+            //write a program to calculate simple interest
+            double p = getDouble("Enter the principal : ");
+            double n = getDouble("Enter the N : ");
+            double r = getDouble("Enter the r : ");
+            Console.WriteLine("Simple Interest : "+(p*n*r/100));
+        }
+        static void q22() 
+        {
+            //write a program to compute compound interest
+            double compoundInterest, p, n, r, t;
+            p = getDouble("Enter the principal : ");
+            n = getDouble("Enter the N : ");
+            r = getDouble("Enter the r : ");
+            int time = getInt("Enter the time in months :");
+            t = time / 12.0;
+            compoundInterest = p*(Math.Pow((1+r/n),(n*t)));
+            Console.WriteLine("Compound Interest :"+compoundInterest);
+        }
+        static void q23() 
+        {
+            //given the height of a person in cm print the height in feet &inches.
+            double height = getDouble("Enter the height in cm : ");
+            double inches = height/2.4;
+            double feet  = height*0.0328;
+            Console.WriteLine("Inches : "+inches+"\nfeet : "+feet);
+        }
+        static void q24() 
+        {
+            //program to find BMI given height in meters and weight in kilograms.
+            double height = getDouble("Enter the height in Meters : ");
+            double weight = getDouble("Enter the weight in Kilograms : ");
+            double bmi = weight / (height * height);
+            Console.WriteLine("BMI : "+bmi);
+        }
+        static void q25()
+        {
+            //program to read roll no, name and marks of three subjects and calculate the total and average.
+            int rollno = getInt("Enter the roll No : ");
+            Console.Write("Enter the Name : ");
+            string name = Console.ReadLine();
+            int mark1 = getInt("Enter the First Mark : ");
+            int mark2 = getInt("Enter the Second Mark : ");
+            int mark3 = getInt("Enter the Third Mark : ");
+            int total = mark1 + mark2 + mark3;
+            double average = total / 3.0;
+            Console.WriteLine("Roll No : \t{0}\nName : \t\t{1}\nTotal : \t{2}\nAverage : \t{3}",rollno,name,total,average);
         }
     }
 }
